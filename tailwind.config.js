@@ -16,6 +16,7 @@ export default {
         navbar: '#background: #223041',
         input: '#223041',
         default_strong: '#1D2938',
+        switch_bg: '#3D5470'
       },
     },
   },

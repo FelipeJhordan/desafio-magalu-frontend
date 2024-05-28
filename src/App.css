@@ -1,0 +1,6 @@
+
+.login-input:focus {
+    outline: none;
+    border-color: 4px #223041;
+    box-shadow: 0 0 5px #223041;
+}

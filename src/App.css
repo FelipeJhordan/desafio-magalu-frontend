@@ -4,3 +4,17 @@
     border-color: 4px #223041;
     box-shadow: 0 0 5px #223041;
 }
+
+.icon-fill {
+    fill: #00FFA3;   
+}
+
+.icon-menu  svg{
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.icon-home svg{
+    width: 1.7em;
+    height: 1.7em;
+}

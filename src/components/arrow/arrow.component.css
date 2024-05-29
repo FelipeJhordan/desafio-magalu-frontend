@@ -1,0 +1,20 @@
+.arrow svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.arrow-active {
+  fill: #00ffa3;
+}
+
+.arrow-active:hover {
+  opacity: 46%;
+}
+
+.arrow-inactive:hover {
+  fill: #00ffa3;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}

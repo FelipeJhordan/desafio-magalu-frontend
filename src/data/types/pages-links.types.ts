@@ -9,6 +9,6 @@ export type PagesChildLinks = {
 
 
 export type PagesLinksParentLinks = Omit<PagesChildLinks, 'parent'> & {
-    children: PagesChildLinks[];
+    children?: PagesChildLinks[];
     active: boolean;
 }

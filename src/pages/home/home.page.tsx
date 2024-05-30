@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { sideBarLinksData } from '../../data/sidebar-links.data';
+import { sideBarLinksData } from '../../data/sidebar-links/sidebar-links.data';
 import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {

@@ -3,7 +3,7 @@ import { forwardRef, useEffect, useState } from 'react';
 import Arrow from '../arrow/arrow.component';
 
 import './sidebar.component.css';
-import { sideBarLinksData } from '../../data/sidebar-links.data';
+import { sideBarLinksData } from '../../data/sidebar-links/sidebar-links.data';
 import SearchInput from '../search-input/search-input.component';
 import SidebarLink from '../sidebar-link/sidebar-link.component';
 

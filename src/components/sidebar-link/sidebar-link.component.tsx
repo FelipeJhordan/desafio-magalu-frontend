@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Arrow from '../arrow/arrow.component';
-import { PagesLinksParentLinks } from '../../data/types/pages-links.types';
+import { PagesLinksParentLinks } from '../../data/sidebar-links/types/pages-links.types';
 
 export type SidebarLinkProps = {
   link: PagesLinksParentLinks;

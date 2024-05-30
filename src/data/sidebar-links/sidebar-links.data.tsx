@@ -1,7 +1,7 @@
 import { ReactSVG } from 'react-svg';
 
-import HomeIcon from '../assets/icons/home.svg';
-import ProfileIcon from '../assets/icons/profile.svg';
+import HomeIcon from '../../assets/icons/home.svg';
+import ProfileIcon from '../../assets/icons/profile.svg';
 
 import { PagesLinksParentLinks } from './types/pages-links.types';
 

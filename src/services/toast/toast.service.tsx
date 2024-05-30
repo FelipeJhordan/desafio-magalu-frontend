@@ -20,7 +20,7 @@ export class ToastService {
   }
 
   static defaultConfig = {
-    autoClose: 11111,
+    autoClose: 5000,
     closeOnClick: true,
     closeButton: false,
     hideProgressBar: true,

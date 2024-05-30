@@ -17,7 +17,8 @@ export default {
         input: '#223041',
         default_strong: '#1D2938',
         switch_bg: '#3D5470',
-        search_bg: '#F4F4F4'
+        search_bg: '#F4F4F4',
+        toast_bg: '#3D5470'
       },
     },
   },

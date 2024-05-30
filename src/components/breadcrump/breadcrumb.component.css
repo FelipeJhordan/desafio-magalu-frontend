@@ -1,0 +1,22 @@
+.breadcrumb-container {
+  position: relative;
+}
+
+.breadcrumb-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 5px;
+  z-index: -1;
+
+  background: #223041;
+  border-radius: 5px;
+  border: 5px #223041;
+}
+
+.breadcrumb-item {
+  position: relative;
+  background-color: #2b3c51;
+}

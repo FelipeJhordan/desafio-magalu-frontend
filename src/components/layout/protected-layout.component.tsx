@@ -56,7 +56,7 @@ const ProtectedLayout = () => {
           showNav && !isMobile ? 'pl-56' : ''
         }`}
       >
-        <div className="px-4 mt-3 md:px-16">
+        <div className="px-4 mt-3 md:px-16 relative">
           <Outlet />
         </div>
       </main>

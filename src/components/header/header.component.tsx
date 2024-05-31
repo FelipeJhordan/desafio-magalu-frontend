@@ -1,10 +1,10 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
+import { Link } from 'react-router-dom';
 
 import SideBarToggle from '../../assets/icons/menu.svg';
 import LogoIcon from '../../assets/icons/logo.svg';
 import ProfileIcon from '../../assets/icons/profile.svg';
-import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   showNav: any;
@@ -14,7 +14,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ showNav, setShowNav }) => {
   return (
     <div
-      className={`fixed w-full h-20  mb-2 bg-header flex justify-between items-center transition-all duration-[400ms] ${
+      className={`fixed w-full z-40 h-20  mb-2 bg-header flex justify-between items-center transition-all duration-[400ms] ${
         showNav ? 'pl-56' : ''
       }`}
     >

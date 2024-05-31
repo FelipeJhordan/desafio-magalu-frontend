@@ -41,7 +41,7 @@ const Sidebar: React.FC<SideBarProps> = forwardRef(({ setShowNav }, ref) => {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="fixed w-70  h-full bg-white shadow-sm"
+      className="fixed w-70  h-full bg-white shadow-sm z-50"
     >
       <div className="flex justify-end  mt-6 pt-2 pb-7 mb-4 shadow-bottom  pr-6">
         <Arrow active={false} direction="left" onClick={setShowNav} />

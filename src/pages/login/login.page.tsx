@@ -7,8 +7,6 @@ const LoginPage: React.FC = () => {
 
   const { login } = useAuth();
 
-
-
   const debounceTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const validateEmail = (email: string) => {
@@ -40,12 +38,12 @@ const LoginPage: React.FC = () => {
     };
   }, [email]);
 
-const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!errors.email && login) {
-            login(email)
+      login(email);
     }
-};
+  };
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -67,9 +65,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               onChange={(e) => setEmail(e.target.value)}
             />
             {errors.email && (
-              <span className="mt-1 text-sm text-red-400">
-                {errors.email}
-              </span>
+              <span className="mt-1 text-sm text-red-400">{errors.email}</span>
             )}
           </div>
           <div className="mb-6">
@@ -83,7 +79,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           </div>
           <div className="mb-6 text-center">
             <button
-              className="w-full bg-green-400 hover:bg-green-500 text-gray-800 font-bold py-3 px-4 rounded-lg"
+              className="w-full bg-green-400 hover:shadow-xl	 text-gray-800 font-bold py-3 px-4 rounded-lg"
               type="submit"
             >
               ENTRAR

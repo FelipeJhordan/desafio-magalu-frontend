@@ -8,7 +8,7 @@ import BreadCrumb from '../../components/breadcrump/breadcrumb.component';
 import { InputFile } from '../../components/input-file/input-file.component';
 import { ToastService } from '../../services/toast/toast.service';
 import { HttpService } from '../../services/http/http.service';
-import { UploadResponseType } from '../../data/sidebar-links/http-response/upload-response.type';
+import { UploadResponseType } from '../../data/http-response/upload-response.type';
 
 const UploadFilePage: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -18,29 +18,30 @@ const UploadFilePage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const httpService = new HttpService()
-      if (!file) {
-        ToastService.alert('Por favor, selecione um arquivo', 'error');
-        setFile(null);
-        return
-      }
-  
-      setLoading(true);
-  
-      const formData = new FormData();
-      formData.append('file', file);
-  
-      const response = await httpService.post<UploadResponseType>(
-        'user-orders/upload',
-        formData,
-        {
-          "Content-Type": "multipart/form-data",
-        }
-      );
-      handleToastMessage(response?.data, response.status);
-  
+    const httpService = new HttpService();
+    if (!file) {
+      ToastService.alert('Por favor, selecione um arquivo', 'error');
       setFile(null);
-      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const response = await httpService.post<UploadResponseType>(
+      'user-orders/upload',
+      formData,
+      {
+        'Content-Type': 'multipart/form-data',
+      }
+    );
+
+    handleToastMessage(response?.data, response.status);
+
+    setFile(null);
+    setLoading(false);
   };
 
   const handleToastMessage = (
@@ -57,11 +58,15 @@ const UploadFilePage: React.FC = () => {
       return;
     }
 
-    if (statusCode === 422 || statusCode === 400) {
-      ToastService.alert('Arquivo inválido', 'error');
+    if (statusCode === 422) {
+      ToastService.alert('Arquivo inválido!', 'error');
       return;
     }
 
+    if (statusCode === 400) {
+      ToastService.alert('Arquivo já foi processado!', 'error');
+      return;
+    }
 
     ToastService.alert('Erro interno no servidor', 'error');
   };
@@ -74,7 +79,7 @@ const UploadFilePage: React.FC = () => {
         <InputFile setFile={setFile} file={file} isLoading={loading} />
         <div className="w-full mt-5 flex justify-end">
           <button
-            className="w-60 bg-green-400 hover:bg-green-500 text-gray-800 font-bold py-3 px-4 rounded-lg"
+            className="w-60  bg-primary  hover:shadow-xl text-gray-800 font-bold py-3 px-4 rounded-lg"
             type="submit"
           >
             ENVIAR

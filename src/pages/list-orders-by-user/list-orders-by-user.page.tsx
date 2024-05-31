@@ -53,6 +53,10 @@ const ListOrderByUserPage: React.FC = () => {
       return;
     }
 
+    if(response.data.length === 0) {
+      ToastService.alert('Nenhum pedido encontrado', 'warning');
+    }
+
     setUserOrdersList(response.data);
   };
 

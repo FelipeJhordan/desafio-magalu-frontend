@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}"
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"
   ],
   theme: {
     extend: {
@@ -18,7 +19,7 @@ export default {
         default_strong: '#1D2938',
         switch_bg: '#3D5470',
         search_bg: '#F4F4F4',
-        toast_bg: '#3D5470'
+        toast_bg: '#3D5470',
       },
     },
   },

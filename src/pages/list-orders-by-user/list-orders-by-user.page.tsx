@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import { DateValueType } from 'react-tailwindcss-datepicker';
 
 import BreadCrumb from '../../components/breadcrump/breadcrumb.component';
@@ -55,6 +56,8 @@ const ListOrderByUserPage: React.FC = () => {
 
     if(response.data.length === 0) {
       ToastService.alert('Nenhum pedido encontrado', 'warning');
+
+      return
     }
 
     setUserOrdersList(response.data);
@@ -63,7 +66,6 @@ const ListOrderByUserPage: React.FC = () => {
   return (
     <>
       <BreadCrumb current="PEDIDOS" parent="HOME" parentPath="/" />
-
       <ListFilter
         dates={datesFilter}
         setDates={setDatesFilter}
@@ -71,6 +73,7 @@ const ListOrderByUserPage: React.FC = () => {
         handleSubmit={onSubmit}
         order={order}
       />
+    <ToastContainer />
 
       <List userOrdersList={userOrdersList} />
     </>

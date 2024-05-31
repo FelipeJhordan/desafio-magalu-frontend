@@ -1,6 +1,6 @@
 # Desafio Magalu Front-end
 ## Descrição
-Esse projeto foi criado com o intuito de implementar o  layout apresentado no <a href="https://www.figma.com/design/A0oWVtPDNSrj1G5SY2dkgA/full-stack?node-id=0-1&t=TsxfpjkNlAGj3Mz6-0" > figma </a>.
+Esse projeto foi criado com o intuito de implementar o  layout apresentado no <a href="https://www.figma.com/design/A0oWVtPDNSrj1G5SY2dkgA/full-stack?node-id=0-1&t=TsxfpjkNlAGj3Mz6-0" > figma</a>.
 Mais detalhes sobre a proposta do desafio pode ser encontrados no <a href="https://github.com/misaku/Desafio-Full-Stack/blob/main/FRONT-END.md"> repositório </a> com a descrição do problema.
 ## Objetivos e diferenciais alcançados
 ### Objetivos

@@ -1,30 +1,66 @@
-# React + TypeScript + Vite
+# Desafio Magalu Front-end
+## Descrição
+Esse projeto foi criado com o intuito de implementar o  layout apresentado no <a href="https://www.figma.com/design/A0oWVtPDNSrj1G5SY2dkgA/full-stack?node-id=0-1&t=TsxfpjkNlAGj3Mz6-0" > figma </a>.
+Mais detalhes sobre a proposta do desafio pode ser encontrados no <a href="https://github.com/misaku/Desafio-Full-Stack/blob/main/FRONT-END.md"> repositório </a> com a descrição do problema.
+## Objetivos e diferenciais alcançados
+### Objetivos
+- [x]   Navegação entre as telas.
+### Diferenciais
+- [x]  Validação dos formulário
+- [ ]  Criação de testes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Links
+O projeto está hospedado na vercel para facilitar a visualização, e a API que é consumida também está sendo hospededada em uma plataforma online.
+- Front-end:  https://desafio-magalu-frontend.vercel.app/
+- Back-end: https://p01--backend--7qb49cjkg5gj.code.run/api/v1/docs
 
-Currently, two official plugins are available:
+## Execução
+### Dependências
+- Node (20.x ou mais recente)
+- Navegador
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Como executar
+Clonar este repositório: 
+```
+   git clone https://github.com/FelipeJhordan/desafio-magalu-frontend.git
+```
+Ir para o diretório:
+```
+  cd desafio-magalu-frontend
+```
+Criar um arquivo .env e adicionar o host da API:
+```
+  touch .env && echo "API_HOST=${SUA_API_HOST}" > .env 
+```
+Instalar as depêndencias:
+```
+npm install ## ou yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Executar a aplicação:
+```
+npm run dev
+```
+## Estrutura do projeto
+O projeto foi estruturado de forma onde cada diretório dentro do /src fosse com um propósito que agregasse arquivos em comum:
+
+## Pages
+Contém as páginas do site, cada uma composta por componentes React e elementos HTML.
+
+## Services
+Inclui serviços e ações que podem ser utilizados para chamar processos específicos.
+
+## Hooks
+Agrupa hooks personalizados para abstrair comportamentos e reutilizá-los entre as páginas.
+
+## Assets
+Armazena arquivos como ícones, imagens, e outros recursos estáticos.
+
+## Components
+Reúne elementos e funcionalidades relacionados a componentes, facilitando o reuso e desacoplando o código.
+
+## Data
+Contém tipagens e dados estáticos para serem utilizados pelas páginas.
+
+
